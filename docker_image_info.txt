@@ -1,0 +1,11 @@
+DOCKER IMAGE
+
+A Docker image is a lightweight, standalone, and executable package that includes everything needed to run a piece of software. It's read-only and is used to create containers.
+
+Components of a Docker Image:
+
+Base Image: This is the starting point, usually a minimal OS or runtime.
+
+Layers: Each change (like installing software, adding files) in the image adds a new layer. Docker uses a layered filesystem, so layers are stacked to form the final image.
+
+Metadata: Contains information like the image’s size, creation date, and instructions (like CMD or ENTRYPOINT) on how to run the container.

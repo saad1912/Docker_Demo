@@ -1,0 +1,5 @@
+1) Build Docker Image -> docker build -t mlops-docker-demo . 
+2) Run in the Powershell of Local Machine -> docker run -p 5000:5000 mlops-docker-demo
+3) Tag the version of docker image in VSCode or Docker Desktop -> docker tag mlops-docker-demo saad1908/mlops-docker-demo:v1
+4) Check whether already logged in -> docker login
+5) Push image to dockerhub -> docker push saad1908/mlops-docker-demo:v1

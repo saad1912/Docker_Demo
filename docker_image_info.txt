@@ -9,3 +9,43 @@ Base Image: This is the starting point, usually a minimal OS or runtime.
 Layers: Each change (like installing software, adding files) in the image adds a new layer. Docker uses a layered filesystem, so layers are stacked to form the final image.
 
 Metadata: Contains information like the image’s size, creation date, and instructions (like CMD or ENTRYPOINT) on how to run the container.
+
+
+
+
+
+DOCKER IMAGE LIFECYCLE
+
+Creation: Build a new image using a Dockerfile or pull one from a registry (e.g., docker pull).
+
+Storage: Images are stored locally in your Docker environment and can be pushed to remote registries like Docker Hub.
+
+Distribution: Images can be shared or distributed by pushing them to a public/private registry, where others can pull and use them.
+
+Execution: When you run a Docker image, a container is created. This container is the live instance of the image.
+
+
+
+
+
+DOCKERFILE
+
+It is a text file with instructions on how to build a Docker image. It's a blueprint for the image, specifying the environment, app, and dependencies.
+
+Key Components:
+FROM: Specifies the base image.
+COPY or ADD: Adds files from your host system into the image.
+RUN: Executes commands in the image, such as installing software.
+CMD or ENTRYPOINT: Defines the command that runs when the container starts.
+EXPOSE: Specifies the port the container will listen on.
+
+
+
+DOCKER CONTAINER
+
+A Docker container is a lightweight, isolated, and executable environment created from a Docker image. It packages the application and all its dependencies, ensuring it runs consistently in any environment.
+
+Key Features:
+Isolation: Each container runs independently with its own filesystem and resources.
+Ephemeral: Containers can be started, stopped, or destroyed easily.
+Lightweight: Containers share the host OS kernel, making them faster and less resource-intensive than VMs.
